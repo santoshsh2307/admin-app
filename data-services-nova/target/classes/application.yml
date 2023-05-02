@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/nova_2023_jan
+    username: root
+    password: root
+    
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  application:
+     name: DATA-SERVICE
+     
+server:
+  port: 8081
+  
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+  
+
